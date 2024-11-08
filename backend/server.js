@@ -15,7 +15,7 @@ connectDB()
 
 app.use(express.json())
 
-app.use(bodyParser);
+//app.use(bodyParser);
 
 
 const PORT = process.env.PORT || 5000
