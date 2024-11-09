@@ -4,6 +4,7 @@ const dotenv = require("dotenv")
 const connectDB = require('./Config/db')
 const colors =  require('colors')
 const userRoutes = require('./routes/userRoutes')
+const chatRoutes = require('./routes/chatRoutes')
 const { notfound , errorHandler } =  require('./Middleware/errorMiddleware')
 const bodyParser = require('body-parser');
 
@@ -25,6 +26,7 @@ app.get('/',(req, res)=>{
 })
 
 app.use('/api/user', userRoutes)
+app.use('/api/chat',chatRoutes)
 
 //middelwares 
 app.use(notfound)
