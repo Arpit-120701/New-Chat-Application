@@ -54,6 +54,7 @@ const authUser = asyncHandler ( async (req, res ) =>{
             pic:user.pic,
             token: generateToken(user._id),
         });
+        console.log("Login successfully !")
       }
       else {
         res.status(201);
