@@ -57,7 +57,8 @@ const authUser = asyncHandler ( async (req, res ) =>{
         console.log("Login successfully !")
       }
       else {
-        res.status(201);
+        console.log("yaha error hai lya ")
+        res.status(401);
         throw new Error("Invalid Email or password !!")
       }
 })
@@ -75,4 +76,8 @@ const allUsers = asyncHandler( async(req,res) =>{
          res.send(users)
     });
 
-module.exports ={ registerUser , authUser , allUsers }
+
+    
+
+
+module.exports ={ registerUser , authUser , allUsers  }

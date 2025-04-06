@@ -7,6 +7,7 @@ const userRoutes = require('./routes/userRoutes')
 const chatRoutes = require('./routes/chatRoutes')
 const { notfound , errorHandler } =  require('./Middleware/errorMiddleware')
 const bodyParser = require('body-parser');
+const messageRoutes = require('./routes/messageRoutes')
 
 
 const app = express()
@@ -25,8 +26,9 @@ app.get('/',(req, res)=>{
     res.send("Running")
 })
 
-app.use('/api/user', userRoutes)
-app.use('/api/chat',chatRoutes)
+app.use('/api/user', userRoutes);
+app.use('/api/chat',chatRoutes);
+app.use('/api/message', messageRoutes);
 
 //middelwares 
 app.use(notfound)
